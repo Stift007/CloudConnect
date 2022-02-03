@@ -4,3 +4,4 @@
 # Python Packages and DLLs
 /venv/
 /__pycache__
+/files/*
