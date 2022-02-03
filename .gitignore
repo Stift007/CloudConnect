@@ -1,0 +1,6 @@
+#SQLAlchemy Stuff
+/users.db
+
+# Python Packages and DLLs
+/venv/
+/__pycache__

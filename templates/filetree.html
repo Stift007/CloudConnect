@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudLiNode | My Files</title>
+    <link rel="icon" href="/cdn/img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut-icon" href="/cdn/img/favicon.ico" type="image/x-icon"/>
+
+</head>
+<body>
+    <h1>Those are your Private Files</h1>
+    {%for file in private%}
+    <br>
+    <a href="/ftp/{{user}}/{{file}}">{{file}}</a>
+    {%endfor%}
+    <a href="/upload/to/private">Upload new Private File</a>
+    <h1>And those are your Public Files</h1>
+    {%for file in shared%}
+    <br>
+    <a href="/ftp/{{user}}/{{file}}">{{file}}</a>
+    {%endfor%}
+    <a href="/upload/to/shared">Upload new Shared File</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudLiNode | Text Editor</title>
+    <link rel="icon" href="/cdn/img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut-icon" href="/cdn/img/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="/cdn/css/sidebar.css">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="/linode/">Home</a>
+        <a href="/linode/packages/" target="_blank">Package Store</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </div>
+      
+      <div class="sidebar-main">
+        <form action="/linode/editor" method="post">
+            <input name="fname" type="text" placeholder="Filename...">
+            <textarea name="fdata"></textarea>
+            <input type="submit">
+        </form>
+        {% for data in log%}
+        <code>{{data}}</code><br>
+        {% endfor %}
+      </div>
+</body>
+</html>
